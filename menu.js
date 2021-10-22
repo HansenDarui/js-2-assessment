@@ -32,6 +32,14 @@
 
 //CODE HERE
 
+const pizza = {
+    name: "pep",
+    price: 10,
+    category: "entree",
+    popularity: 10,
+    rating: 7,
+    tags: ['yummy', 'smackin']
+};
 
 
 //////////////////PROBLEM 2////////////////////
@@ -44,6 +52,7 @@
 
 //CODE HERE
 
+console.log(pizza.name);
 
 /*
     Second, log the second tag in your pizza's
@@ -54,6 +63,7 @@
 
 //CODE HERE
 
+// console.log(pizza.tags[1]);
 
 /*
     Third, destructure the price off of the
@@ -64,6 +74,8 @@
 
 //CODE HERE
 
+// let {price: newPrice} = pizza;
+// console.log(newPrice);
 
 /*
     Fourth, and last, destructure the category
@@ -74,6 +86,8 @@
 
 //CODE HERE
 
+let {category} = pizza;
+console.log(category);
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -89,7 +103,16 @@
 
 //CODE HERE
 
-
+let foodArr = [
+    {
+        name: "tacos",
+        price: 40,
+        category: "lunch",
+        popularity: 2000,
+        rating: 7,
+        tags: ["theBest", "yep"]
+    }
+];
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -105,7 +128,13 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+
+const filteredFood = foodArr.filter(function (a) {
+    return foodArr.tag === "yep"
+});
+
+
+console.log(filteredFood);
 
 
 
