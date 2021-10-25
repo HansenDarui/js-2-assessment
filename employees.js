@@ -71,13 +71,7 @@ Call the `getSchedule` method on the
 //CODE HERE
 
 
-let empTwo = {
-    ...empOne => {
-        let Nick = empTwo
-    }
-};
-
-console.log(Nick)
+const empTwo = {...empOne, name: "Nick"};
 
 
 
@@ -108,36 +102,66 @@ console.log(Nick)
 
 //CODE HERE
 
+class Manager extends Employee {
+    constructor(name, shifts, employees) {
+            super(employees, employees);
+            this.name = name;
+            this.shifts = shifts;
+            this.employees = employees;
+    };
+    *getEmployees() {
+        return (`${this.name} manages ${this.employees}`)
+    }
+    *addEmployees(emp) {
+        return this.employees.push(emp)
+    }
+}
+    
+
+// }; get newEmployee() {
+//     Manager.push(this.newEmployee());
+// }
 
 
-/*
+    /*
     Create a new instance of your class.
     Save it to a variable called `manager`.
-
+    
     You can use this sample data or make
     up your own:
     name: Winston
     shifts: weekday mornings, weekday afternoons
     employees: Cece and Schmidt
+    */
+   
+//CODE HERE
+
+let mana = new Manager('Billy', 'weekday mornings, weekday afternoons', 'Cece and Schmidt');
+
+
+/*
+Call the `getEmployees` method on the
+`manager` object.  
 */
 
 //CODE HERE
 
+let getEmployees = mana.getEmployees;
+
+getEmployees('Billy', mana.employees);
 
 /*
-    Call the `getEmployees` method on the
-    `manager` object.  
-*/
-
-//CODE HERE
-
-/*
-    Call the `addEmployee` method on the 
-    `manager` object passing in the string 
-    'Coach' or whatever name you'd like.
+Call the `addEmployee` method on the 
+`manager` object passing in the string 
+'Coach' or whatever name you'd like.
 */
 
 //CODE HERE 
+
+let addEmployees = mana.addEmployees
+
+addEmployees('Coach');
+
 
 /*
     Call the `getEmployees` method on the
@@ -146,3 +170,5 @@ console.log(Nick)
 */
 
 //CODE HERE
+
+console.log(mana.getEmployees);

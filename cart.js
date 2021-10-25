@@ -35,12 +35,9 @@ const cart = [
 
 //CODE HERE
 
-const total = (arr) => {
-    let totalArr = arr.priceSum
-    console.log(totalArr)
-}
+const total = (total) => cart[0].price + cart[1].price + cart[2].price;
 
-const summedPrice = cart.reduce(total);
+console.log(cart.reduce(total));
 
 
 //////////////////PROBLEM 2////////////////////
@@ -60,7 +57,13 @@ const summedPrice = cart.reduce(total);
 
 //CODE HERE
 
+function calcFinalPrice(cartTotal, couponValue, tax) {
+    return (cartTotal + (cartTotal * tax)) - couponValue;
+}
 
+let boom = calcFinalPrice(44, 4, .05);
+
+console.log(boom);
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -83,13 +86,25 @@ const summedPrice = cart.reduce(total);
 */
 
 /*
-    TEXT ANSWER HERE
-
+    name, number, time, occasion 
+    name so they know their customer, number so they can call if anything goes wrong, time so they know when theyre coming in, 
+    occasion incase it is for something special like a bday party
 */
 
 /*
     Now, create a customer object following your own
     guidelines.
+    name: string, because its letters
+    number: number, because it consists of numbers
+    time: number, because it also consists of numbers and the place opens after 12 and closes before 12 so we dont need to add am or pm
+    occasion: string, it is letters 
 */
 
 //CODE HERE
+
+const customer = {
+    name: 'Billy & Tammy',
+    number: 8018018801,
+    time: 9,
+    occasion: 'Billy got BDAY!'
+};

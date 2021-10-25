@@ -129,7 +129,7 @@ let foodArr = [
 //CODE HERE
 
 
-const filteredFood = foodArr.filter(function (a) {
+const filteredFood = foodArr.filter(function  {
     return foodArr.tag === "yep"
 });
 
